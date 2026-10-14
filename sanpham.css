@@ -1,0 +1,422 @@
+/* Section sản phẩm */
+.product-section {
+  padding: 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 10px;
+  font-size: 2.2rem;
+  color: #1d3557;
+}
+
+/* Grid sản phẩm */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Card sản phẩm */
+/* Cấu trúc chung của Card */
+.product-card {
+  display: flex;
+  flex-direction: column; /* Xếp theo chiều dọc */
+  height: 100%; /* Đảm bảo các card cao bằng nhau trong 1 hàng */
+  justify-content: space-between;
+  position: relative;
+  border: 1px solid #eee;
+  padding: 15px;
+  border-radius: 8px;
+  background: #fff;
+}
+/* Giới hạn chiều cao tên sản phẩm để không làm lệch card */
+.product-info h3 {
+  min-height: 45px; /* Giữ chỗ cho 2 dòng text */
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+/* Đẩy phần hành động xuống đáy */
+.product-actions-wrapper {
+  margin-top: auto; /* Quan trọng: Đẩy phần này xuống sát đáy */
+  padding-top: 15px;
+}
+
+/* Style cho ô số lượng */
+.quantity-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.qty-input {
+  width: 50px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+}
+
+/* Style các nút bấm */
+.actions {
+  display: flex;
+  gap: 5px;
+}
+
+.actions .btn {
+  flex: 1; /* Hai nút chia đều độ rộng */
+  padding: 8px 5px;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 4px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.buy {
+  background-color: #000;
+  color: #fff;
+}
+.btn.detail {
+  border: 1px solid #000;
+  color: #000;
+  background: #fff;
+}
+
+.btn.disabled {
+  background: #ccc !important;
+  cursor: not-allowed;
+}
+
+.out-of-stock-msg {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.badge-out {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(214, 40, 40, 0.8);
+  color: white;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 11px;
+}
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(255, 0, 0, 0.12);
+}
+
+.product-image-wrapper {
+  height: 240px; /* Chiều cao cố định → ảnh bằng nhau */
+  overflow: hidden;
+  background: #f1f3f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.product-image-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Giữ tỷ lệ, không bị cắt méo */
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.08);
+}
+
+.product-card h3 {
+  font-size: 1.35rem;
+  margin: 1.2rem 1rem 0.6rem;
+  color: #1d3557;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #e63946;
+  margin: 0.5rem 0 1rem;
+}
+
+/* Tag MỚI */
+.tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #e63946;
+  color: white;
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.tag.new {
+  background: #d00000;
+}
+
+/* Nút hành động */
+.product-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 1rem 1.5rem;
+}
+
+.btn-outline {
+  padding: 0.7rem 1.4rem;
+  border: 2px solid #e63946;
+  color: #e63946;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-outline:hover {
+  background: #e63946;
+  color: white;
+}
+
+.btn-primary {
+  padding: 0.7rem 1.4rem;
+  background: #e63946;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background: #d00000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .product-image-wrapper {
+    height: 220px;
+  }
+}
+.brand-section {
+  margin-bottom: 60px;
+}
+
+.brand-title h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 30px 0 20px;
+  border-left: 6px solid #d32f2f;
+  padding-left: 12px;
+}
+
+.brand-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.brand-more {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.hero-banner {
+  position: relative;
+  height: 65vh;
+  overflow: hidden;
+}
+
+/* VIDEO BACKGROUND */
+.hero-banner video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* LỚP PHỦ TỐI (như linear-gradient) */
+.hero-banner .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 2;
+}
+
+/* NỘI DUNG */
+.banner-content {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* NỘI DUNG BANNER */
+.banner-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff; /* Chữ trắng */
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.banner-content h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #f1f1f1; /* Trắng nhạt */
+  margin-bottom: 2rem;
+}
+
+/* NÚT CTA */
+.btn-cta {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  background: #e63946; /* Đỏ */
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(230, 57, 70, 0.4);
+}
+
+.btn-cta:hover {
+  background: #d00000; /* Đỏ đậm khi hover */
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(208, 0, 0, 0.5);
+}
+
+.filter-bar {
+  display: flex;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.filter-bar select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* =========================
+   FILTER BAR – SHOWROOM STYLE
+========================= */
+.filter-bar.compact {
+  background: #000000;
+  padding: 20px 5%;
+  position: relative;
+  z-index: 10;
+  margin-top: -40px;
+}
+
+/* Container */
+.filter-container {
+  background: #950000;
+  padding: 18px 20px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Select box */
+.filter-container select {
+  appearance: none; /* xoá style mặc định */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  min-width: 220px;
+  padding: 14px 44px 14px 18px;
+  font-size: 15px;
+  font-weight: 500;
+
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  background-color: #fff;
+  color: #111827;
+
+  cursor: pointer;
+  transition: all 0.25s ease;
+
+  /* icon mũi tên */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236b7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 18px;
+}
+
+/* Hover */
+.filter-container select:hover {
+  border-color: #ef4444;
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.15);
+}
+
+/* Focus */
+.filter-container select:focus {
+  outline: none;
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.25);
+}
+
+/* Option */
+.filter-container option {
+  font-weight: 500;
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+  .filter-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .filter-container select {
+    width: 100%;
+    min-width: unset;
+  }
+}
+.product-page {
+  padding-top: 20px; /* chỉnh riêng trang sản phẩm */
+}
+/* SECTION SẢN PHẨM – SÁT FILTER */
+.product-section {
+  padding-top: 10px; /* 👈 chỉnh số này */
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+}

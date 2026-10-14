@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sản phẩm | AUTOMOTO</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+     <link rel="stylesheet" href="sanpham.css" />
+    
+  </head>
+  <body>
+    <!-- HEADER (giữ nguyên như bạn) -->
+    <section id="header">
+      <div class="header-container">
+        <!-- Logo -->
+        <a href="index.php" class="logo">
+          <img src="img/logo.jpg" alt="Logo" />
+        </a>
+
+        <!-- Menu -->
+        <ul id="navbar">
+          <li><a  href="index.php">Trang chủ</a></li>
+          <li><a class="active" href="sanpham.html">Sản phẩm</a></li>
+          <li><a  href="tuvan.html">Tư vấn</a></li>
+          <li><a href="about.html">Giới thiệu</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+
+        <!-- Icons -->
+        <div class="header-icons">
+
+  <!-- Search -->
+<div class="search-wrapper">
+  <div class="search-container" id="search-container">
+    <input type="text" id="search-field" placeholder="Tìm sản phẩm..." />
+    <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+  </div>
+</div>
+
+  <!-- Login -->
+  <div class="user-box">
+    <i class="fa-regular fa-user" id="user-icon"></i>
+    
+  </div>
+
+  <!-- Cart -->
+  <a href="cart.html" class="cart">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span class="cart-count">1</span>
+  </a>
+
+</div>
+      </div>
+    </section>
+    <!-- BANNER ĐẦU TRANG (mới thêm) -->
+    
+    <section class="hero-banner">
+  <video autoplay muted loop playsinline>
+    <source src="img/video_sp/banner_video.mp4" type="video/mp4" />
+    Trình duyệt của bạn không hỗ trợ video
+  </video>
+
+  <div class="overlay"></div>
+
+  <div class="banner-content">
+    <h1>Khám Phá Hành Trình</h1>
+    <h3>AUTO MOTO – Chọn xe chất, vững mọi hành trình</h3>
+     <a href="#Product1" class="btn-cta">Khám phá ngay</a>
+  </div>
+</section>
+
+<!-- FILTER BAR - Modern & Clean -->
+<!-- FILTER BAR - Compact & Sticky -->
+<div class="filter-bar compact">
+  <div class="filter-container">
+    <select id="filter-brand">
+      <option value="">Tất cả hãng</option>
+      <option value="Honda">Honda</option>
+      <option value="Yamaha">Yamaha</option>
+      <option value="Suzuki">Suzuki</option>
+      <option value="Vinfast">VinFast</option>
+    </select>
+
+    <select id="filter-type">
+      <option value="">Tất cả loại xe</option>
+      <option value="xe số">Xe số</option>
+      <option value="xe tay ga">Xe tay ga</option>
+      <option value="xe tay côn">Xe tay côn</option>
+      <option value="xe điện">Xe điện</option>
+      <option value="xe phân khối lớn">Xe phân khối lớn</option>
+    </select>
+
+    <select id="filter-price">
+      <option value="">Tất cả mức giá</option>
+      <option value="low">Dưới 30 triệu</option>
+      <option value="mid">30–70 triệu</option>
+      <option value="high">Trên 70 triệu</option>
+    </select>
+  </div>
+</div>
+
+<!-- Tiêu đề danh mục (giữ nguyên nhưng giảm margin) -->
+<section id="Product1" class="section-p1">
+  
+  <div class="product-container">
+    <!-- cards -->
+  </div>
+</section>
+
+
+  <!-- Product -->
+     <section id="Product1" class="section-p1 product-page">
+      <h2>Danh mục xe</h2>
+      
+      <div class="product-container">
+        <div class="product-card" data-brand="Suzuki" data-type="petrol" data-price="132.900.000" data-category="xe Adventure">
+          
+          
+          <img  class="brand-logo" src="img/Brand/Suzuki.png" />
+          <img src="img/products/suzuki/V-Strom 250SX/image1.jpg" class="product-img" />
+          <h3>Suzuki V-Strom 250SX</h3>
+          <p class="price">132.900.000 VND</p>
+          <div class="action">
+            <a href="#" class="btn buy">Mua ngay</a>
+            <a href="chitiet.html?id=vstrom250sx" class="btn detail">Xem chi tiết</a>
+          </div>
+        </div>
+         <div class="product-card" data-brand="Honda" data-type="petrol" data-price="32.193.818" data-category="xe số">
+      
+      <img class="brand-logo" src="img/Brand/Honda.svg" />
+      <img src="img/products/honda/honda future.png" class="product-img" />
+      <h3>Honda Future 125FI</h3>
+      <p class="price">32.193.818 VND</p>
+      <div class="actions">
+        <a href="#" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=honda-future-125-fi" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+     <div class="product-card" data-brand="Yamaha" data-type="petrol" data-price=" 69.000.000" data-category="xe tay ga">
+      
+      <img class="brand-logo" src="img/Brand/Yamaha.jpg" />
+      <img src="img/products/yamaha/NVX/Xanh-Duong-G8-1024x684.webp" class="product-img" />
+      <h3>NVX</h3>
+      <p class="price"> 69.000.000 VNĐ</p>
+      <div class="actions">
+        <a href="#" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=yamaha-nvx-155-vva" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+     <div class="product-card" data-brand="Honda" data-type="petrol" data-price="18.742.909" data-category="xe số">
+      
+      <img class="brand-logo" src="img/Brand/Honda.svg" />
+      <img src="img/products/honda/wave alpha.png" class="product-img" />
+      <h3>Wave alpha</h3>
+      <p class="price">18.742.909 VNĐ</p>
+      <div class="actions">
+        <a href="#" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=honda-wave-alpha-110" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+    <div class="product-card" data-brand="Suzuki" data-type="petrol" data-price="53.080.000" data-category="xe tay côn">
+      
+      <img class="brand-logo" src="img/Brand/Suzuki.png" />
+      <img src="img/products/suzuki/Raider-R150.jpg" class="product-img" />
+      <h3>Raider-R150</h3>
+      <p class="price">53.080.000 VNĐ</p>
+      <div class="actions">
+        <a href="#" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=suzuki-raider-r150-fi" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+    <div class="product-card" data-brand="Honda" data-type="petrol" data-price="21.943.637" data-category="xe số">
+      
+      <img class="brand-logo" src="img/Brand/Honda.svg" />
+      <img src="img/products/honda/Blade.webp" class="product-img" />
+      <h3>Blade</h3>
+      <p class="price">21.943.637 VNĐ</p>
+      <div class="actions">
+        <a href="#" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=honda-blade-110" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+    <div class="product-card" data-brand="Vinfast" data-type="electric" data-price="32.000.000" data-category="xe điện">
+      
+      <img class="brand-logo" src="img/Brand/Vinfast.png" />
+      <img src="img/products/vinfast/vento neo.webp" class="product-img" />
+      <h3>Vento Neo</h3>
+      <p class="price">32.000.000 VNĐ</p>
+      <div class="actions">
+        <a href="#" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=vento-neo-125" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+    <div class="product-card" data-brand="Vinfast" data-type="electric" data-price="34.900.000" data-category="xe điện">
+      
+      <img class="brand-logo" src="img/Brand/Vinfast.png" />
+      <img src="img/products/vinfast/VERO/z7469557256462_b4283ba328ddd6a2168ba92262dde8fc.jpg" class="product-img" />
+      <h3>VERO X</h3>
+      <p class="price">34.900.000 VNĐ</p>
+      <div class="actions">
+        <a href="#" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=vinfast-vero-x" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+    <div class="product-card" data-brand="Suzuki" data-type="petrol" data-price="43.900.000" data-category="xe phân khối lớn">
+      
+      <img class="brand-logo" src="img/Brand/Suzuki.png" />
+      <img src="img/products/suzuki/GSX.png" class="product-img" />
+      <h3>GSX</h3>
+      <p class="price">43.000.000 VNĐ</p>
+      <div class="actions">
+        <a href="#" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=suzuki-gsx-r150" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+    <div class="product-card" data-brand="Honda" data-type="petrol" data-price="264.990.000" data-category="xe phân khối lớn">
+      
+      <img class="brand-logo" src="img/Brand/Honda.svg" />
+      <img src="img/products/honda/crb650.png" class="product-img" />
+      <h3>CBR650</h3>
+      <p class="price">264.990.000 VNĐ</p>
+      <div class="actions">
+        <a href="#" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=honda-cbr650r" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+    <div class="product-card" data-brand="Vinfast" data-type="electric" data-price="29.700.000" data-category="xe điện">
+      
+      <img class="brand-logo" src="img/Brand/Vinfast.png" />
+      <img src="img/products/vinfast/felix.webp" class="product-img" />
+      <h3>FELIZ</h3>
+      <p class="price">29.700.000 VNĐ</p>
+      <div class="actions">
+        <a href="#" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=vinfast-feliz-s" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+    <div class="product-card" data-brand="Yamaha" data-type="petrol" data-price="51.251.000" data-category="xe tay ga">
+      
+      <img class="brand-logo" src="img/Brand/Yamaha.jpg" />
+      <img src="img/products/yamaha/Grande.webp" class="product-img" />
+      <h3>Grande</h3>
+      <p class="price">51.251.000 VNĐ</p>
+      <div class="actions">
+        <a href="#" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=yamaha-grande-125-hybrid" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+    <div class="product-card" data-brand="Yamaha" data-type="petrol" data-price="54.200.000" data-category="xe tay côn">
+      
+      <img class="brand-logo" src="img/Brand/Yamaha.jpg" />
+      <img src="img/products/yamaha/Exciter155.webp" class="product-img" />
+      <h3>Exciter155</h3>
+      <p class="price">54.200.000 VNĐ</p>
+      <div class="actions">
+        <a href="#" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=yamaha-exciter-155-vva" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+    <div class="product-card" data-brand="Yamaha" data-type="petrol" data-price="48.500.000" data-category="xe tay ga">
+      
+      <img class="brand-logo" src="img/Brand/Yamaha.jpg" />
+      <img src="img/products/yamaha/lexi.jpg" class="product-img" />
+      <h3>LEXI</h3>
+      <p class="price">48.500.000 VNĐ</p>
+      <div class="actions">
+        <a href="#" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=yamaha-lexi-155-vva" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+    <div class="product-card" data-brand="Yamaha" data-type="petrol" data-price="69.000.000" data-category="xe tay côn">
+      
+      <img class="brand-logo" src="img/Brand/Yamaha.jpg" />
+      <img src="img/products/yamaha/mt 15.webp" class="product-img" />
+      <h3>MT 15</h3>
+      <p class="price">69.000.000  VNĐ</p>
+      <div class="actions">
+        <a href="" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=yamaha-mt-15" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+    <div class="product-card" data-brand="Yamaha" data-type="petrol" data-price="30.633.000" data-category="xe tay ga">
+      
+      <img class="brand-logo" src="img/Brand/Yamaha.jpg" />
+      <img src="img/products/yamaha/freego.webp" class="product-img" />
+      <h3>Freego</h3>
+      <p class="price">30.633.000 VNĐ</p>
+      <div class="actions">
+        <a href="#" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=yamaha-freego-125" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+    <div class="product-card" data-brand="Yamaha" data-type="petrol" data-price="32.891.000" data-category="xe tay ga">
+      
+      <img class="brand-logo" src="img/Brand/Yamaha.jpg" />
+      <img src="img/products/yamaha/Janus.webp" class="product-img" />
+      <h3>Janus</h3>
+      <p class="price">32.891.000 VNĐ</p>
+      <div class="actions">
+        <a href="#" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=yamaha-janus-125" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+    <div class="product-card" data-brand="Suzuki" data-type="petrol" data-price="53.490.000" data-category="xe tay côn">
+      
+      <img class="brand-logo" src="img/Brand/Suzuki.png" />
+      <img src="img/products/suzuki/Satria-MATBLACK.jpg" class="product-img" />
+      <h3>Satria-MATBLACK</h3>
+      <p class="price">53.490.000 VNĐ</p>
+      <div class="actions">
+        <a href="#" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=suzuki-satria-f150-matblack" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+    <div class="product-card" data-brand="Honda" data-type="petrol" data-price="58.590.000" data-category="xe tay ga">
+      
+      <img class="brand-logo" src="img/Brand/Honda.svg" />
+      <img src="img/products/honda/airblade.png" class="product-img" />
+      <h3>Air Blade</h3>
+      <p class="price">58.590.000 VNĐ</p>
+      <div class="actions">
+        <a href="#" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=honda-air-blade-160" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+    <div class="product-card" data-brand="Yamaha" data-type="petrol" data-price="22.190.000" data-category="xe số">
+      
+      <img class="brand-logo" src="img/Brand/Yamaha.jpg" />
+      <img src="img/products/yamaha/sirus.webp" class="product-img" />
+      <h3>Sirus</h3>
+      <p class="price">22.190.000  VNĐ</p>
+      <div class="actions">
+        <a href="#" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=yamaha-sirius-fi-115" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+    <div class="product-card" data-brand="Honda" data-type="petrol" data-price="87.273.818" data-category="xe số">
+      
+      <img class="brand-logo" src="img/Brand/Honda.svg" />
+      <img src="img/products/honda/super cup.png" class="product-img" />
+      <h3>Super Cup</h3>
+      <p class="price">87.273.818 VNĐ</p>
+      <div class="actions">
+        <a href="#" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=honda-super-cub-c125" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+    <div class="product-card" data-brand="Suzuki" data-type="petrol" data-price="24.000.000" data-category="xe tay ga">
+      
+      <img class="brand-logo" src="img/Brand/Suzuki.png" />
+      <img src="img/products/suzuki/impulse 125.webp" class="product-img" />
+      <h3>Impulse 125</h3>
+      <p class="price">24.000.000 VNĐ</p>
+      <div class="actions">
+        <a href="#" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=suzuki-impulse-125-fi" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+    <div class="product-card" data-brand="Honda" data-type="petrol" data-price="36.612.000" data-category="xe tay ga">
+      
+      <img class="brand-logo" src="img/Brand/Honda.svg" />
+      <img src="img/products/honda/vision.png" class="product-img" />
+      <h3>Vision</h3>
+      <p class="price">36.612.000 VNĐ</p>
+      <div class="actions">
+        <a href="#" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=honda-vision-110" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+    <div class="product-card" data-brand="Honda" data-type="petrol" data-price="181.300.000" data-category="xe phân khối lớn">
+      
+      <img class="brand-logo" src="img/Brand/Honda.svg" />
+      <img src="img/products/honda/rebel.png" class="product-img" />
+      <h3>Rebel</h3>
+      <p class="price">181.300.000 VNĐ</p>
+      <div class="actions">
+        <a href="#" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=honda-rebel-500" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+    <div class="product-card" data-brand="Honda" data-type="petrol" data-price="339.900.000" data-category="xe phân khối lớn">
+      
+      <img class="brand-logo" src="img/Brand/Honda.svg" />
+      <img src="img/products/honda/C1000.jpg" class="product-img" />
+      <h3>CB1000 Hornet</h3>
+      <p class="price">339.900.000 VNĐ</p>
+      <div class="actions">
+        <a href="#" class="btn buy">Mua ngay</a>
+        <a href="chitiet.html?id=honda-cb1000-hornet" class="btn detail">Xem chi tiết</a>
+      </div>
+    </div>
+
+ 
+
+
+      </div>
+     </section>
+      </div>
+    </section>
+    <script src="sanpham.js"></script>
+      <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const container = document.getElementById("search-container");
+  const icon = document.getElementById("search-icon");
+  const input = document.getElementById("search-field");
+
+  icon.addEventListener("click", function (e) {
+    e.stopPropagation();
+
+    if (!container.classList.contains("active")) {
+      container.classList.add("active");
+      input.focus();
+    } else {
+      const keyword = input.value.trim();
+      if (keyword !== "") {
+        window.location.href =
+          "sanpham.php?keyword=" + encodeURIComponent(keyword);
+      }
+    }
+  });
+
+  // Nhấn Enter để tìm
+  input.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+      const keyword = this.value.trim();
+      if (keyword !== "") {
+        window.location.href =
+          "sanpham.php?keyword=" + encodeURIComponent(keyword);
+      }
+    }
+  });
+
+  // Click ngoài → thu lại
+  document.addEventListener("click", function (e) {
+    if (!container.contains(e.target)) {
+      container.classList.remove("active");
+      input.value = "";
+    }
+  });
+
+});
+</script>
+
+  </body>
+</html>

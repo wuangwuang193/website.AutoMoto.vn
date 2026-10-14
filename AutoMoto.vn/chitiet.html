@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi tiết xe | AUTOMOTO</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <section id="header">
+      <div class="header-container">
+        <!-- Logo -->
+        <a href="index.php" class="logo">
+          <img src="img/logo.jpg" alt="Logo" />
+        </a>
+
+        <!-- Menu -->
+        <ul id="navbar">
+          <li><a href="index.php">Trang chủ</a></li>
+          <li><a href="sanpham.html">Sản phẩm</a></li>
+          <li><a class="active" href="tuvan.html">Tư vấn</a></li>
+          <li><a href="about.html">Giới thiệu</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+
+        <!-- Icons -->
+        <div class="header-icons">
+          <!-- Search -->
+          <div class="search-wrapper">
+            <div class="search-container" id="search-container">
+              <input
+                type="text"
+                id="search-field"
+                placeholder="Tìm sản phẩm..."
+              />
+              <i class="fa-solid fa-magnifying-glass" id="search-icon"></i>
+            </div>
+          </div>
+
+          <!-- Login -->
+          <div class="user-box">
+            <i class="fa-regular fa-user" id="user-icon"></i>
+          </div>
+
+          <!-- Cart -->
+          <a href="cart.html" class="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count">1</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <style>
+      body {
+        font-family: "Roboto Condensed", sans-serif;
+        background: #f8f9fa;
+        margin: 0;
+      }
+
+      /* ===== HERO ===== */
+      .hero-banner {
+        position: relative;
+        height: 70vh;
+        min-height: 400px;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .hero-banner .overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      .banner-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+      }
+
+      .banner-content h1 {
+        font-size: 3.5rem;
+        margin-bottom: 10px;
+      }
+
+      .price {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      /* ===== PRODUCT ===== */
+      .product-detail {
+        max-width: 1200px;
+        margin: 60px auto;
+        padding: 0 30px;
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+      }
+
+      /* ===== IMAGE SLIDER ===== */
+      .main-image {
+        position: relative;
+        width: 100%;
+        height: 500px;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+      }
+
+      .main-image img {
+        max-width: 90%;
+        max-height: 90%;
+        object-fit: contain;
+        transition: opacity 0.3s ease;
+      }
+
+      /* Nút trái phải */
+      .nav-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        border: none;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .nav-btn:hover {
+        background: #d32f2f;
+      }
+
+      .prev {
+        left: 15px;
+      }
+      .next {
+        right: 15px;
+      }
+
+      /* ===== TEXT ===== */
+      h2 {
+        color: #d32f2f;
+      }
+
+      .features-list {
+        padding-left: 20px;
+      }
+
+      .features-list li {
+        margin: 10px 0;
+      }
+
+      .spec-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 30px;
+      }
+
+      .spec-table th,
+      .spec-table td {
+        border: 1px solid #ddd;
+        padding: 12px;
+      }
+
+      .spec-table th {
+        background: #f1f1f1;
+        width: 40%;
+      }
+
+      /* Responsive */
+      @media (max-width: 992px) {
+        .grid-2 {
+          grid-template-columns: 1fr;
+        }
+        .main-image {
+          height: 350px;
+        }
+      }
+      /* Khối giá + nút mua dưới Tính năng nổi bật */
+      .price-buy-section {
+        margin-top: 25px;
+        padding: 25px 20px;
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+        text-align: center;
+      }
+
+      .main-price {
+        font-size: 2.8rem;
+        font-weight: 900;
+        color: #d32f2f;
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      .price-note {
+        font-size: 1rem;
+        color: #666;
+        display: block;
+        margin-bottom: 20px;
+      }
+
+      .action-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+      }
+
+      .buy-now-btn,
+      .consult-btn {
+        padding: 14px 40px;
+        font-size: 1.3rem;
+        border-radius: 50px;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+
+      .buy-now-btn {
+        background: #d32f2f;
+        color: white;
+        box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3);
+      }
+
+      .buy-now-btn:hover {
+        background: #b71c1c;
+        transform: translateY(-3px);
+      }
+
+      .consult-btn {
+        background: #555;
+        color: white;
+      }
+
+      .consult-btn:hover {
+        background: #333;
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 768px) {
+        .action-buttons {
+          flex-direction: column;
+          gap: 15px;
+        }
+        .main-price {
+          font-size: 2.4rem;
+        }
+      }
+      .price-box {
+        background: #f8f8f8;
+        border-radius: 20px;
+        padding: 35px 30px; /* giảm padding */
+        margin-top: 30px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      }
+
+      .price-big {
+        font-size: 42px; /* nhỏ lại (trước 55-60px) */
+        font-weight: 800;
+        color: #d62828;
+        margin-bottom: 8px;
+      }
+
+      .price-note {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+
+      .btn-buy {
+        padding: 10px 28px; /* nhỏ lại */
+        font-size: 16px;
+        border-radius: 40px;
+      }
+
+      .btn-consult {
+        padding: 10px 28px;
+        font-size: 16px;
+        border-radius: 40px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HERO -->
+
+    <div class="hero-banner" id="heroBanner">
+      <div class="overlay"></div>
+      <div class="banner-content">
+        <h1 id="productName">Đang tải...</h1>
+        <!-- Bỏ giá và button ra khỏi đây -->
+      </div>
+    </div>
+
+    <!-- PRODUCT DETAIL -->
+    <section class="product-detail">
+      <div class="grid-2">
+        <!-- IMAGE -->
+        <div class="main-image">
+          <button class="nav-btn prev" onclick="changeImage(-1)">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <img id="mainImage" src="" alt="Xe" />
+
+          <button class="nav-btn next" onclick="changeImage(1)">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- INFO -->
+        <div>
+          <h2>Mô tả</h2>
+          <p id="description"></p>
+
+          <h3>Tính năng nổi bật</h3>
+          <ul class="features-list" id="featuresList"></ul>
+          <!-- Khối giá + mua ngay - đặt ngay dưới Tính năng nổi bật -->
+          <div class="price-buy-section">
+            <div class="price-main">
+              <span id="productPrice" class="main-price">132.900.000 ₫</span>
+              <small class="price-note">Giá đề xuất (chưa phí lăn bánh)</small>
+            </div>
+
+            <div class="action-buttons">
+              <a href="cart.html" class="buy-now-btn">
+                <i class="fa-solid fa-cart-shopping"></i> Mua ngay
+              </a>
+              <a href="tuvan.html" class="consult-btn">
+                <i class="fa-solid fa-headset"></i> Tư vấn ngay
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Thông số kỹ thuật</h2>
+      <table class="spec-table">
+        <tbody id="specTable"></tbody>
+      </table>
+    </section>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const slug = urlParams.get("id");
+
+      if (!slug) {
+        alert("Không tìm thấy xe!");
+        window.location.href = "sanpham.html";
+      }
+
+      /* ===== SLIDER ===== */
+      let currentIndex = 0;
+      let imageList = [];
+
+      function changeImage(direction) {
+        if (imageList.length === 0) return;
+
+        currentIndex += direction;
+
+        if (currentIndex < 0) currentIndex = imageList.length - 1;
+        if (currentIndex >= imageList.length) currentIndex = 0;
+
+        const img = document.getElementById("mainImage");
+        img.style.opacity = 0;
+        setTimeout(() => {
+          img.src = imageList[currentIndex];
+          img.style.opacity = 1;
+        }, 200);
+      }
+
+      function fixPath(path) {
+        if (!path) return "";
+        return path.replace(/\\/g, "/").trim();
+      }
+
+      /* ===== FETCH DATA ===== */
+      fetch(`chitiet_api.php?id=${slug}`)
+        .then((res) => res.json())
+        .then((data) => {
+          document.getElementById("productName").textContent = data.name;
+          document.getElementById("productPrice").textContent =
+            data.price_formatted;
+
+          const bannerImg = fixPath(data.main_image || data.images_arr[0]);
+          document.getElementById("heroBanner").style.backgroundImage =
+            `url('${bannerImg}')`;
+
+          if (data.images_arr && data.images_arr.length > 0) {
+            imageList = data.images_arr.map((img) => fixPath(img));
+            document.getElementById("mainImage").src = imageList[0];
+          }
+
+          document.getElementById("description").textContent =
+            data.description || data.short_desc;
+
+          if (data.features_arr) {
+            const list = document.getElementById("featuresList");
+            data.features_arr.forEach((f) => {
+              const li = document.createElement("li");
+              li.textContent = f;
+              list.appendChild(li);
+            });
+          }
+
+          if (data.specs_arr) {
+            const table = document.getElementById("specTable");
+            for (const [key, value] of Object.entries(data.specs_arr)) {
+              const tr = document.createElement("tr");
+              tr.innerHTML = `<th>${key}</th><td>${value}</td>`;
+              table.appendChild(tr);
+            }
+          }
+        })
+        .catch((err) => {
+          console.error(err);
+          alert("Không thể tải dữ liệu xe.");
+        });
+    </script>
+    <script>
+      const id = new URLSearchParams(window.location.search).get("id");
+
+      fetch("chitiet_api.php?id=" + id)
+        .then((res) => res.json())
+        .then((data) => {
+          document.getElementById("ten-sp").innerText = data.name;
+          document.getElementById("gia-sp").innerText = data.price;
+          document.getElementById("anh-sp").src = "img/" + data.image;
+        });
+    </script>
+  </body>
+</html>

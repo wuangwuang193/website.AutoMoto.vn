@@ -1,0 +1,258 @@
+/* Khung chứa icon và menu */
+.user-box {
+  position: relative; /* Quan trọng để menu con căn theo icon */
+  cursor: pointer;
+}
+
+#user-icon {
+  font-size: 20px;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+/* Menu thả xuống */
+.user-dropdown {
+  position: absolute;
+  top: 50px; /* Cách icon một khoảng */
+  right: 0;
+  background-color: #fff;
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: none; /* Mặc định ẩn */
+  z-index: 1000;
+  overflow: hidden;
+  animation: fadeIn 0.3s ease;
+}
+
+/* Hiện menu khi có class active */
+.user-dropdown.active {
+  display: block;
+}
+
+/* Animation cho mượt */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Nội dung bên trong menu */
+.user-info-top {
+  padding: 15px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #eee;
+}
+
+.user-info-top p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.user-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-dropdown ul li a {
+  display: block;
+  padding: 12px 15px;
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.user-dropdown ul li a i {
+  margin-right: 10px;
+  width: 20px;
+  color: #e74c3c;
+}
+
+.user-dropdown ul li a:hover {
+  background-color: #f1f1f1;
+  color: #e74c3c;
+}
+
+.user-dropdown hr {
+  margin: 0;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+.logout-btn {
+  color: #e74c3c !important;
+}
+/* Reset nhẹ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Nền toàn trang */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Hiệu ứng ánh sáng nền */
+.auth-container::before {
+  content: "";
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(231, 76, 60, 0.4), transparent 70%);
+  top: -200px;
+  right: -200px;
+  filter: blur(80px);
+}
+
+/* Card form */
+.auth-form {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px);
+  padding: 45px 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  animation: fadeUp 0.8s ease;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* Animation xuất hiện */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 35px;
+  color: #fff;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+/* Input */
+.auth-form input {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.auth-form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.auth-form input:focus {
+  outline: none;
+  border: 1px solid #e74c3c;
+  box-shadow: 0 0 10px rgba(231, 76, 60, 0.6);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Button */
+.auth-form button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(135deg, #e74c3c, #ff6a5e);
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 10px 20px rgba(231, 76, 60, 0.4);
+}
+
+.auth-form button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 25px rgba(231, 76, 60, 0.6);
+}
+
+/* Link */
+.auth-form p {
+  text-align: center;
+  margin-top: 25px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+}
+
+.auth-form a {
+  color: #ff6a5e;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-form a:hover {
+  text-decoration: underline;
+}
+
+/* Thông báo */
+.msg {
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.error {
+  background: rgba(255, 0, 0, 0.15);
+  color: #ffb3b3;
+  border: 1px solid rgba(255, 0, 0, 0.4);
+}
+
+.success {
+  background: rgba(0, 255, 0, 0.15);
+  color: #b6ffb6;
+  border: 1px solid rgba(0, 255, 0, 0.4);
+}
+.auth-form textarea {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 14px;
+  transition: 0.3s;
+  resize: none;
+}
+
+.auth-form textarea:focus {
+  outline: none;
+  border: 1px solid #e74c3c;
+  box-shadow: 0 0 10px rgba(231, 76, 60, 0.6);
+  background: rgba(255, 255, 255, 0.15);
+}
